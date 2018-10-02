@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="bordan16.woact.no.ticatac.fragments.GameFragment">
+    tools:context=".fragments.GameFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -31,31 +31,26 @@
             android:layout_marginBottom="20dp"
             android:layout_marginEnd="30dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
-            android:alpha="0.5"
+            android:alpha="0.3"
             android:contentDescription="@board"
             android:src="@drawable/tic_regular_theme_orange"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.792" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
-            android:id="@+id/buddahImg"
-            android:layout_width="150dp"
-            android:layout_height="130dp"
-            android:layout_marginBottom="8dp"
+            android:id="@+id/myGameImageView"
+            android:layout_width="105dp"
+            android:layout_height="100dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="30dp"
             android:alpha="0.8"
-            android:src="@drawable/buddha"
-            app:layout_constraintBottom_toTopOf="@+id/button2"
+            android:src="@drawable/long_dragon"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/myBackground"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button9"
@@ -160,6 +155,7 @@
             app:layout_constraintEnd_toStartOf="@+id/button2" />
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:orientation="horizontal"
@@ -274,57 +270,128 @@
             android:id="@+id/playerOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="24dp"
             android:text="@string/player1"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/playerOneThumbNail"
+            app:layout_constraintEnd_toEndOf="@+id/playerOneScore"
+            app:layout_constraintStart_toStartOf="@+id/playerOneThumbNail" />
 
         <TextView
             android:id="@+id/playerTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="24dp"
             android:text="@string/player2"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/playerTwoThumbNail"
+            app:layout_constraintEnd_toEndOf="@+id/playerTwoThumbNail"
+            app:layout_constraintStart_toStartOf="@+id/playerTwoScore" />
 
         <TextView
             android:id="@+id/playerOneScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="8dp"
             android:text="0"
             android:textAlignment="center"
             android:textSize="40sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/playerOne"
-            app:layout_constraintHorizontal_bias="0.517"
-            app:layout_constraintStart_toStartOf="@+id/playerOne"
-            app:layout_constraintTop_toBottomOf="@+id/playerOne" />
+            app:layout_constraintBottom_toBottomOf="@+id/myGameImageView"
+            app:layout_constraintEnd_toStartOf="@+id/myGameImageView"
+            app:layout_constraintTop_toTopOf="@+id/myGameImageView"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/playerTwoScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
             android:text="0"
             android:textAlignment="center"
             android:textSize="40sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/playerTwo"
-            app:layout_constraintStart_toStartOf="@+id/playerTwo"
-            app:layout_constraintTop_toBottomOf="@+id/playerTwo" />
+            app:layout_constraintBottom_toBottomOf="@+id/myGameImageView"
+            app:layout_constraintStart_toEndOf="@+id/myGameImageView"
+            app:layout_constraintTop_toTopOf="@+id/myGameImageView"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/playerTwoThumbNail"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bamboo"
+            app:layout_constraintBottom_toBottomOf="@+id/playerTwoScore"
+            app:layout_constraintStart_toEndOf="@+id/playerTwoScore"
+            app:layout_constraintTop_toTopOf="@+id/playerTwoScore"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/musicButton"
+            android:layout_width="120sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="16dp"
+            android:alpha="0.6"
+            android:background="@drawable/game_button_design"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/music_on"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/playerTwoThumbNail"
+            app:layout_constraintStart_toStartOf="@+id/playerOneThumbNail"
+            app:layout_constraintTop_toBottomOf="@+id/myGameImageView" />
+
+        <ImageView
+            android:id="@+id/playerOneThumbNail"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="24dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bamboo"
+            app:layout_constraintBottom_toBottomOf="@+id/playerOneScore"
+            app:layout_constraintEnd_toStartOf="@+id/playerOneScore"
+            app:layout_constraintTop_toTopOf="@+id/playerOneScore"
+            app:layout_constraintVertical_bias="0.857" />
+
+        <ImageView
+            android:id="@+id/myBrushLine"
+            android:layout_width="300dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/brush"
+            app:layout_constraintEnd_toEndOf="@+id/playerTwoThumbNail"
+            app:layout_constraintStart_toStartOf="@+id/playerOneThumbNail"
+            app:layout_constraintTop_toBottomOf="@+id/myGameImageView" />
+
+        <Chronometer
+            android:id="@+id/myChronometerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/musicButton"
+            app:layout_constraintEnd_toEndOf="@+id/musicButton"
+            app:layout_constraintStart_toStartOf="@+id/musicButton" />
 
     </android.support.constraint.ConstraintLayout>
+
 </FrameLayout>

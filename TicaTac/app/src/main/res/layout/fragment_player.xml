@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="bordan16.woact.no.ticatac.fragments.PlayerFragment">
+    tools:context=".fragments.PlayerFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -45,9 +45,9 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="28dp"
             android:text="ENTER PLAYERNAME"
-            android:textAlignment="viewStart"
+            android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@android:color/black"
             android:textSize="20sp"
@@ -58,47 +58,47 @@
 
         <EditText
             android:id="@+id/playerOneTextInput"
-            android:layout_width="160dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
             android:ems="10"
             android:hint="ENTER PLAYER 1 NAME"
             android:inputType="textPersonName"
-            android:textAlignment="viewStart"
+            android:textAlignment="center"
             android:textAllCaps="true"
-            android:textSize="14sp"
+            android:textSize="17sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/playerTwoTextInput"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/symbolLabel" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
             android:id="@+id/playerTwoTextInput"
-            android:layout_width="160dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:ems="10"
             android:hint="ENTER PLAYER 2 NAME"
             android:inputType="textPersonName"
-            android:textAlignment="viewStart"
+            android:textAlignment="center"
             android:textAllCaps="true"
-            android:textSize="14sp"
+            android:textSize="17sp"
             android:textStyle="bold"
             android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/playerOneTextInput" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/playerTwoImage"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginBottom="44dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
@@ -111,7 +111,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginBottom="44dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginTop="8dp"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
@@ -132,7 +132,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.923">
+            app:layout_constraintVertical_bias="1.0">
 
             <ImageView
                 android:id="@+id/bamboImg"
@@ -180,10 +180,10 @@
                 android:src="@drawable/panda"
                 app:layout_constraintBottom_toTopOf="@+id/tigerImg"
                 app:layout_constraintStart_toEndOf="@+id/koiImg" />@drawable/panda"
-                android:background="tig"
-                app:layout
-                _toTopOf="@+id/tigerImg"
-                app:lay />
+            android:background="tig"
+            app:layout
+            _toTopOf="@+id/tigerImg"
+            app:lay />
 
             <ImageView
                 android:id="@+id/yinImg"
@@ -249,6 +249,21 @@
                 app:layout_constraintTop_toBottomOf="@+id/tigerImg" />
 
         </android.support.constraint.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/myTransparentImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@android:color/transparent"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 </FrameLayout>
